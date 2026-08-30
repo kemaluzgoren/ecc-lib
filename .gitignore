@@ -1,0 +1,41 @@
+# --- Build directories ------------------------------------------------------
+build/
+build-*/
+out/
+cmake-build-*/
+
+# --- CMake in-source artifacts --------------------------------------------
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+cmake_install.cmake
+install_manifest.cmake
+CTestTestfile.cmake
+compile_commands.json
+_deps/
+
+# --- CTest -------------------------------------------------------------------
+Testing/
+DartConfiguration.tcl
+
+# --- Compiled objects / binaries -----------------------------------------
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+*.pdb
+*.ilk
+
+# --- Editor / OS -----------------------------------------------------------
+.vscode/
+.vs/
+.idea/
+*.swp
+*~
+.DS_Store
+Thumbs.db
