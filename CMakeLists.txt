@@ -43,8 +43,10 @@ option(ECC_BUILD_EXAMPLES "Build the ecc examples"   OFF)
 
 # --- library -----------------------------------------------------------------
 add_library(ecc
-    src/hamming.c
-    src/channel.c
+    src/hamming/hamming.c
+    src/channel/channel.c
+    src/polar/polar.c
+    src/polar/polar_reliability_table.c
 )
 add_library(ecc::ecc ALIAS ecc)
 
@@ -57,6 +59,10 @@ if(CMAKE_C_COMPILER_ID MATCHES "GNU|Clang")
     target_compile_options(ecc PRIVATE -Wall -Wextra -Wpedantic)
 elseif(MSVC)
     target_compile_options(ecc PRIVATE /W4)
+endif()
+
+if(UNIX)
+    target_link_libraries(ecc PRIVATE m)  # log/sqrt/cos (AWGN) and fabs (Polar SC) need libm on Linux/gcc
 endif()
 
 # --- tests -----------------------------------------------------------------
