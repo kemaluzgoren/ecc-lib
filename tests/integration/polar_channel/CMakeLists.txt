@@ -1,0 +1,6 @@
+add_executable(test_polar_channel_sim test_polar_channel_sim.c)
+target_link_libraries(test_polar_channel_sim PRIVATE ecc)
+if(UNIX)
+    target_link_libraries(test_polar_channel_sim PRIVATE m)
+endif()
+add_test(NAME polar_channel_integration_test COMMAND test_polar_channel_sim)
