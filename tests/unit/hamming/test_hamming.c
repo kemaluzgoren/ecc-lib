@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "hamming.h"
+#include "ecc/hamming.h"
 #include <assert.h>
 #include <string.h>
 #include <stdio.h>

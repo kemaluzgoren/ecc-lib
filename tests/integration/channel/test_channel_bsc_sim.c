@@ -10,8 +10,8 @@
  */
 
 #include "test_channel_bsc_sim.h"
-#include "channel.h"
-#include "hamming.h"
+#include "ecc/channel.h"
+#include "ecc/hamming.h"
 #include <assert.h>
 #include <math.h>
 #include <stdio.h>
