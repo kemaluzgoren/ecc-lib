@@ -35,7 +35,7 @@ ecc-lib/
 
 ## Documentation
 
-- [docs/Hamming.md](docs/hamming.md) — Hamming code: parameters, position scheme, why decoding needs no stored parity-check matrix.
+- [docs/Hamming.md](docs/Hamming.md) — Hamming code: parameters, position scheme, why decoding needs no stored parity-check matrix.
 - [docs/Polar.md](docs/Polar.md) — Polar code: channel polarization, 3GPP frozen-bit selection, encoding, SC decoding, limitations.
 
 ## Requirements
